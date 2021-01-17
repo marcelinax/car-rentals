@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CarRentalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Cars">
+    <Key>
+      <PropertyRef Name="CarId" />
+    </Key>
+    <Property Name="CarId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Brand" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Model" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Type" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="CarYear" Type="int" Nullable="false" />
+    <Property Name="FuelType" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Mileage" Type="int" Nullable="false" />
+    <Property Name="Availability" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="PricePerKm" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="PricePerHour" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="PricePerDay" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="UserId" Type="int" />
+  </EntityType>
+  <EntityType Name="Payments">
+    <Key>
+      <PropertyRef Name="PaymentID" />
+    </Key>
+    <Property Name="PaymentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TotalAmount" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="RentalId" Type="int" />
+  </EntityType>
+  <EntityType Name="Rentals">
+    <Key>
+      <PropertyRef Name="RentalId" />
+    </Key>
+    <Property Name="RentalId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="CarId" Type="int" />
+    <Property Name="CalculationType" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="DataFrom" Type="date" Nullable="false" />
+    <Property Name="DataTo" Type="date" />
+  </EntityType>
+  <EntityType Name="Sharing">
+    <Key>
+      <PropertyRef Name="SharingId" />
+    </Key>
+    <Property Name="SharingId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CarId" Type="int" />
+    <Property Name="DataFrom" Type="date" Nullable="false" />
+    <Property Name="DataTo" Type="date" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Login" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="DateOfBirth" Type="date" Nullable="false" />
+    <Property Name="City" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Phone" Type="char" MaxLength="9" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="45" Nullable="false" />
+    <Property Name="PESEL" Type="char" MaxLength="11" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Cars__UserId__286302EC">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="Cars" Type="Self.Cars" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Cars">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Payments__Rental__32E0915F">
+    <End Role="Rentals" Type="Self.Rentals" Multiplicity="0..1" />
+    <End Role="Payments" Type="Self.Payments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rentals">
+        <PropertyRef Name="RentalId" />
+      </Principal>
+      <Dependent Role="Payments">
+        <PropertyRef Name="RentalId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Payments__UserId__31EC6D26">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="Payments" Type="Self.Payments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Payments">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Rentals__CarId__2C3393D0">
+    <End Role="Cars" Type="Self.Cars" Multiplicity="0..1" />
+    <End Role="Rentals" Type="Self.Rentals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cars">
+        <PropertyRef Name="CarId" />
+      </Principal>
+      <Dependent Role="Rentals">
+        <PropertyRef Name="CarId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Rentals__UserId__2B3F6F97">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="Rentals" Type="Self.Rentals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Rentals">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Sharing__CarId__2F10007B">
+    <End Role="Cars" Type="Self.Cars" Multiplicity="0..1" />
+    <End Role="Sharing" Type="Self.Sharing" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cars">
+        <PropertyRef Name="CarId" />
+      </Principal>
+      <Dependent Role="Sharing">
+        <PropertyRef Name="CarId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CarRentalModelStoreContainer">
+    <EntitySet Name="Cars" EntityType="Self.Cars" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Payments" EntityType="Self.Payments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Rentals" EntityType="Self.Rentals" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sharing" EntityType="Self.Sharing" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Cars__UserId__286302EC" Association="Self.FK__Cars__UserId__286302EC">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Cars" EntitySet="Cars" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Payments__Rental__32E0915F" Association="Self.FK__Payments__Rental__32E0915F">
+      <End Role="Rentals" EntitySet="Rentals" />
+      <End Role="Payments" EntitySet="Payments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Payments__UserId__31EC6D26" Association="Self.FK__Payments__UserId__31EC6D26">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Payments" EntitySet="Payments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Rentals__CarId__2C3393D0" Association="Self.FK__Rentals__CarId__2C3393D0">
+      <End Role="Cars" EntitySet="Cars" />
+      <End Role="Rentals" EntitySet="Rentals" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Rentals__UserId__2B3F6F97" Association="Self.FK__Rentals__UserId__2B3F6F97">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Rentals" EntitySet="Rentals" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Sharing__CarId__2F10007B" Association="Self.FK__Sharing__CarId__2F10007B">
+      <End Role="Cars" EntitySet="Cars" />
+      <End Role="Sharing" EntitySet="Sharing" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
