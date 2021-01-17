@@ -26,11 +26,10 @@
         <TextBlock HorizontalAlignment="Left" Margin="191,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Phone"/>
         <TextBox x:Name="emailInput" HorizontalAlignment="Left" Height="23" Margin="191,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBlock HorizontalAlignment="Left" Margin="191,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="E_mail"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="191,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBlock x:Name="addressInput" HorizontalAlignment="Left" Margin="191,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Address"/>
-        <TextBox x:Name="peselInput" HorizontalAlignment="Left" Height="23" Margin="191,278,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBlock HorizontalAlignment="Left" Margin="191,257,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="PESEL"/>
+        <TextBox x:Name="peselInput" HorizontalAlignment="Left" Height="23" Margin="191,224,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="191,203,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="PESEL"/>
         <DatePicker x:Name="birthdateInput" HorizontalAlignment="Left" Margin="45,318,0,0" VerticalAlignment="Top"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="218,368,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Page> 
