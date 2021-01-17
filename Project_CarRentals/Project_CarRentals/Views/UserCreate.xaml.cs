@@ -44,7 +44,12 @@ namespace Project_CarRentals.Views
             context.Users.Add(newUser);
             context.SaveChanges();
         }
+        private void GoMainMenu(object sender, RoutedEventArgs e)
+        {
+            var mainMenuPage = new MainMenu();
+            NavigationService.Navigate(mainMenuPage);
+        }
 
-        
+
     }
 }

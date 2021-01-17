@@ -21,3 +21,5 @@ D:\Studia\Programowanie obiektowe - lab\Projekt semestralny\Car_rentals\Project_
 D:\Studia\Programowanie obiektowe - lab\Projekt semestralny\Car_rentals\Project_CarRentals\Project_CarRentals\obj\Debug\Project_CarRentals.csproj.CopyComplete
 D:\Studia\Programowanie obiektowe - lab\Projekt semestralny\Car_rentals\Project_CarRentals\Project_CarRentals\obj\Debug\Project_CarRentals.exe
 D:\Studia\Programowanie obiektowe - lab\Projekt semestralny\Car_rentals\Project_CarRentals\Project_CarRentals\obj\Debug\Project_CarRentals.pdb
+D:\Studia\Programowanie obiektowe - lab\Projekt semestralny\Car_rentals\Project_CarRentals\Project_CarRentals\obj\Debug\Views\MainMenu.g.cs
+D:\Studia\Programowanie obiektowe - lab\Projekt semestralny\Car_rentals\Project_CarRentals\Project_CarRentals\obj\Debug\Views\MainMenu.baml
