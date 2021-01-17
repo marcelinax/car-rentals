@@ -29,5 +29,10 @@ namespace Project_CarRentals.Views
             var userCreatePage = new UserCreate();
             NavigationService.Navigate(userCreatePage);
         }
+        private void GoCarCreate(object sender, RoutedEventArgs e)
+        {
+            var carCreatePage = new CarCreate();
+            NavigationService.Navigate(carCreatePage);
+        }
     }
 }
