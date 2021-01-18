@@ -7,12 +7,30 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="MainMenu">
-
+    <Page.Resources>
+        <Style x:Key="ButtonRoundedCorner" TargetType="Button">
+            <Setter Property="Background" Value="Silver"/>
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="10" Background="{TemplateBinding Background}" BorderThickness="2">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center">
+                            </ContentPresenter>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
     <Grid>
         <Rectangle Fill="#FF252422" HorizontalAlignment="Left" Height="450" Stroke="Black" VerticalAlignment="Top" Width="800"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="139,217,0,0" VerticalAlignment="Top" Width="75" Click="GoUserCreate"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="139,253,0,0" VerticalAlignment="Top" Width="75" Click="GoCarCreate"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="139,278,0,0" VerticalAlignment="Top" Width="75" Click="GoRentCar"/>
-
+        <Button  Style="{StaticResource ButtonRoundedCorner}" Content="Create user" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="100" Background="#FFEB5E28" Foreground="#FFE8E4DB" Height="27" BorderThickness="1" FontSize="10" Margin="288,165,0,0" Click="GoUserCreate"/>
+        <Button  Style="{StaticResource ButtonRoundedCorner}" Content="Create car" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="100" Background="#403D39" Foreground="#FFE8E4DB" Height="27" BorderThickness="1" FontSize="10" Margin="413,165,0,0" Click="GoCarCreate"/>
+        <Button  Style="{StaticResource ButtonRoundedCorner}" Content="List of users" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="100" Background="#403D39" Foreground="#FFE8E4DB" Height="27" BorderThickness="1" FontSize="10" Margin="288,212,0,0" />
+        <Button  Style="{StaticResource ButtonRoundedCorner}" Content="List of cars" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="100" Background="#FFEB5E28" Foreground="#FFE8E4DB" Height="27" BorderThickness="1" FontSize="10" Margin="413,212,0,0" />
+        <Button  Style="{StaticResource ButtonRoundedCorner}" Content="Rent car" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="100" Background="#FFEB5E28" Foreground="#FFE8E4DB" Height="27" BorderThickness="1" FontSize="10" Margin="288,259,0,0" Click="GoRentCar"/>
+        <Button  Style="{StaticResource ButtonRoundedCorner}" Content="Return car" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="100" Background="#403D39" Foreground="#FFE8E4DB" Height="27" BorderThickness="1" FontSize="10" Margin="413,259,0,0" />
+        <Button  Style="{StaticResource ButtonRoundedCorner}" Content="Sharing your car" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="100" Background="#403D39" Foreground="#FFE8E4DB" Height="27" BorderThickness="1" FontSize="10" Margin="288,306,0,0" />
     </Grid>
 </Page>
