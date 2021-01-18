@@ -34,5 +34,10 @@ namespace Project_CarRentals.Views
             var carCreatePage = new CarCreate();
             NavigationService.Navigate(carCreatePage);
         }
+        private void GoRentCar(object sender, RoutedEventArgs e)
+        {
+            var rentCarPage = new RentCar();
+            NavigationService.Navigate(rentCarPage);
+        }
     }
 }
