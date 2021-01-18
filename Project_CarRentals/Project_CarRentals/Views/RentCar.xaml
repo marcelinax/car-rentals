@@ -33,7 +33,7 @@
                 </LinearGradientBrush>
             </ComboBox.Background>
         </ComboBox>
-        <DatePicker x:Name="rentFromInput" HorizontalAlignment="Left" Margin="248,237,0,0" VerticalAlignment="Top" Width="140" Height="22" RenderTransformOrigin="0.771,0.909"/>
+        <DatePicker x:Name="rentToInput" HorizontalAlignment="Left" Margin="248,237,0,0" VerticalAlignment="Top" Width="140" Height="22" RenderTransformOrigin="0.771,0.909"/>
         <Button  Style="{StaticResource ButtonRoundedCorner}" Content="Rent" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="100" Background="#FFEB5E28" Foreground="#FFE8E4DB" Height="27" BorderThickness="1" FontSize="10" Margin="291,312,0,0" Click="RentCarFc"/>
         <Button Style="{StaticResource ButtonRoundedCorner}" Content="Go back" HorizontalAlignment="Left" Margin="411,312,0,0" VerticalAlignment="Top" Width="100" Background="#FF403D39" FontSize="10" Height="27" Click="GoMainMenu"/>
         <ComboBox x:Name="userSelect" HorizontalAlignment="Left" VerticalAlignment="Top" Width="140" Margin="413,182,0,0" BorderBrush="#FF252422" Foreground="#FF252422" RenderTransformOrigin="1.407,0.409">
@@ -55,7 +55,7 @@
         </ComboBox>
         <TextBlock HorizontalAlignment="Left" Height="50" Margin="280,65,0,0" TextWrapping="Wrap" Text="Rent car" VerticalAlignment="Top" Width="245" Foreground="#FFFFFCF2" FontFamily="Rockwell" FontSize="30" TextAlignment="Center"/>
         <TextBlock HorizontalAlignment="Left" Margin="413,163,0,0" TextWrapping="Wrap" Text="Choose user" VerticalAlignment="Top" Foreground="#FFFFFCF2" FontSize="10"/>
-        <TextBlock HorizontalAlignment="Left" Margin="248,218,0,0" TextWrapping="Wrap" Text="Rent from" VerticalAlignment="Top" Foreground="#FFFFFCF2" FontSize="10"/>
+        <TextBlock HorizontalAlignment="Left" Margin="248,218,0,0" TextWrapping="Wrap" Text="Rent to (not required)" VerticalAlignment="Top" Foreground="#FFFFFCF2" FontSize="10"/>
         <TextBlock HorizontalAlignment="Left" Margin="415,218,0,0" TextWrapping="Wrap" Text="Choose callculation type " VerticalAlignment="Top" Foreground="#FFFFFCF2" FontSize="10"/>
 
     </Grid>

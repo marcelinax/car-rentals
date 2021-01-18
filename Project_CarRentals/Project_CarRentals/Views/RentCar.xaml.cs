@@ -65,8 +65,8 @@ namespace Project_CarRentals.Views
             {
                 CarId = selectedCarId,
                 UserId = int.Parse(userSelect.SelectedValue.ToString()),
-                /*DataFrom = DateTime.Now,
-                DataTo = (DateTime)rentFromInput.SelectedDate*/
+                DataFrom = DateTime.Now,
+                DataTo = (DateTime)rentToInput.SelectedDate
             };
 
             context.Rentals.Add(newRental);
