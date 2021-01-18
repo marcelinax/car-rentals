@@ -20,12 +20,16 @@ namespace Project_CarRentals.Views
     /// </summary>
     public partial class RentCar : Page
     {
+        /// <summary>
+        /// Class that allows you to rent a car by selecting the user and the car from the list in the Database
+        /// </summary>
         public RentCar()
         {
             InitializeComponent();
             this.fillCarCombobox();
             this.fillUserCombobox();
         }
+        
         private void fillCarCombobox()
         {
             var context = new CarRentalEntities();
@@ -39,7 +43,6 @@ namespace Project_CarRentals.Views
                 carSelect.Items.Add(new { Text = car.Brand + " " + car.Model + " [" + car.CarYear + "] " + car.FuelType + " " + car.Mileage + "km", Value = car.CarId });
             }
         }
-        
         private void fillUserCombobox()
         {
             var context = new CarRentalEntities();
@@ -53,11 +56,6 @@ namespace Project_CarRentals.Views
                 userSelect.Items.Add(new { Text = user.Name + " " + user.LastName, Value = user.UserId });
             }
         }
-
-
-        /// <summary>
-        /// Create new rental for specified user ID and car ID
-        /// </summary>
         private void RentCarFc(object sender, RoutedEventArgs e)
         {
             var context = new CarRentalEntities();
@@ -78,9 +76,6 @@ namespace Project_CarRentals.Views
 
             context.SaveChanges();
         }
-        /// <summary>
-        /// Return to the main menu
-        /// </summary>
         private void GoMainMenu(object sender, RoutedEventArgs e)
         {
             var mainMenuPage = new MainMenu();

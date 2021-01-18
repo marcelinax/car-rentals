@@ -20,12 +20,14 @@ namespace Project_CarRentals.Views
     /// </summary>
     public partial class CarCreate : Page
     {
+        /// <summary>
+        /// Class that allows you to add a new car to the Database
+        /// </summary>
         public CarCreate()
         {
             InitializeComponent();
             this.fillCombobox();
         }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             var context = new CarRentalEntities();
@@ -46,6 +48,9 @@ namespace Project_CarRentals.Views
             context.Cars.Add(newCar);
             context.SaveChanges();
         }
+        /// <summary>
+        /// User selection from the list of users from DataBase
+        /// </summary>
 
         public void fillCombobox()
         {

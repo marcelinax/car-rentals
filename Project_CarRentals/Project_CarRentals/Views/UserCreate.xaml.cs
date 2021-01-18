@@ -21,6 +21,9 @@ namespace Project_CarRentals.Views
     /// </summary>
     public partial class UserCreate : Page
     {
+        /// <summary>
+        /// Class that allows you to add a new user to the Database
+        /// </summary>
         public UserCreate()
         {
             InitializeComponent();

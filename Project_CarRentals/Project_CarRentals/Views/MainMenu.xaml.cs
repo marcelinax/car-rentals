@@ -20,6 +20,9 @@ namespace Project_CarRentals.Views
     /// </summary>
     public partial class MainMenu : Page
     {
+        /// <summary>
+        /// The class that enables navigation between the pages of the application
+        /// </summary>
         public MainMenu()
         {
             InitializeComponent();
@@ -29,6 +32,7 @@ namespace Project_CarRentals.Views
             var userCreatePage = new UserCreate();
             NavigationService.Navigate(userCreatePage);
         }
+        
         private void GoCarCreate(object sender, RoutedEventArgs e)
         {
             var carCreatePage = new CarCreate();
