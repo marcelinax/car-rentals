@@ -45,7 +45,7 @@
             </ComboBox.Background>
         </ComboBox>
         <TextBlock HorizontalAlignment="Left" Margin="248,163,0,0" TextWrapping="Wrap" Text="Choose car" VerticalAlignment="Top" Foreground="#FFFFFCF2" FontSize="10"/>
-        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="140" Margin="413,237,0,0" BorderBrush="#FF252422" Foreground="#FF252422">
+        <ComboBox x:Name="callculationTypeSelect" HorizontalAlignment="Left" VerticalAlignment="Top" Width="140" Margin="413,237,0,0" BorderBrush="#FF252422" Foreground="#FF252422" >
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                     <GradientStop Color="#FFF0F0F0" Offset="0"/>

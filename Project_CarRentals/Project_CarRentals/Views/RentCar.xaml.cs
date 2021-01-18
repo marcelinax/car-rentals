@@ -28,6 +28,7 @@ namespace Project_CarRentals.Views
             InitializeComponent();
             this.fillCarCombobox();
             this.fillUserCombobox();
+            this.fillCallculationTypeCombobox();
         }
         
         private void fillCarCombobox()
@@ -76,11 +77,19 @@ namespace Project_CarRentals.Views
 
             context.SaveChanges();
         }
+        private void fillCallculationTypeCombobox()
+        {
+            callculationTypeSelect.Items.Add("Price per hour");
+            callculationTypeSelect.Items.Add("Price per kilometer");
+            callculationTypeSelect.Items.Add("Price per day");
+        }
+
         private void GoMainMenu(object sender, RoutedEventArgs e)
         {
             var mainMenuPage = new MainMenu();
             NavigationService.Navigate(mainMenuPage);
         }
+
     }
 }
 
