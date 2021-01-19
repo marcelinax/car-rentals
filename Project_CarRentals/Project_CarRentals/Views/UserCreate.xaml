@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Project_CarRentals.Views"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="UserCreate">
+      Title="UserCreate" Height="450" Width="800"> 
     <Page.Resources>
         <Style x:Key="ButtonRoundedCorner" TargetType="Button">
             <Setter Property="Background" Value="Silver"/>
@@ -29,7 +29,7 @@
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
 
-        <Rectangle Fill="#FF252422" HorizontalAlignment="Left" Height="450" Stroke="Black" VerticalAlignment="Top" Width="800"/>
+        <Rectangle Fill="#FF252422" HorizontalAlignment="Left" Height="450" Stroke="#00000000" VerticalAlignment="Top" Width="800"/>
 
         <TextBox x:Name="loginInput" HorizontalAlignment="Left" Height="22" Margin="163,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Background="#FF403D39" Text="Login" Foreground="#FFFFFCF2" FontSize="10"  BorderBrush="#FF707070" VerticalContentAlignment="Center"/>
         <TextBlock HorizontalAlignment="Left" Margin="320,71,0,0" TextWrapping="Wrap" Text="Create user" VerticalAlignment="Top" FontSize="30" Foreground="#FFFFFCF2" FontFamily="Rockwell"/>

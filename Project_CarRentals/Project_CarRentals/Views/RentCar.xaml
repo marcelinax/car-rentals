@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Project_CarRentals.Views"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="RentCar">
+      Title="RentCar" Width="800" Height="450" Foreground="#00000000">
     <Page.Resources>
         <Style x:Key="ButtonRoundedCorner" TargetType="Button">
             <Setter Property="Background" Value="Silver"/>
@@ -24,7 +24,7 @@
         </Style>
     </Page.Resources>
     <Grid>
-        <Rectangle Fill="#FF252422" HorizontalAlignment="Left" Height="450" Stroke="Black" VerticalAlignment="Top" Width="800"/>
+        <Rectangle Fill="#FF252422" HorizontalAlignment="Left" Height="450" Stroke="#00000000" VerticalAlignment="Top" Width="800"/>
         <ComboBox x:Name="carSelect" HorizontalAlignment="Left" VerticalAlignment="Top" Width="140" Margin="248,182,0,0" BorderBrush="#FF252422" Foreground="#FF252422">
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">

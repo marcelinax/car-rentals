@@ -5,5 +5,5 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project_CarRentals"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"  Source="/Views/MainMenu.xaml">
+        Title="MainWindow" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Height="600" Width="1000"  Source="/Views/MainMenu.xaml" Background="#FF252422">
 </NavigationWindow>

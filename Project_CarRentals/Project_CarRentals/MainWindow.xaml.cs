@@ -23,6 +23,8 @@ namespace Project_CarRentals
         public MainWindow()
         {
             InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
         }
+
     }
 }
