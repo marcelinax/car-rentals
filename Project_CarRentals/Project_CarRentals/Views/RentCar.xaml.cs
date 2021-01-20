@@ -28,7 +28,6 @@ namespace Project_CarRentals.Views
             InitializeComponent();
             this.fillCarCombobox();
             this.fillUserCombobox();
-            this.fillCallculationTypeCombobox();
         }
         
         private void fillCarCombobox()
@@ -54,7 +53,7 @@ namespace Project_CarRentals.Views
             var users = context.Users;
             foreach (var user in users)
             {
-                userSelect.Items.Add(new { Text = user.Name + " " + user.LastName, Value = user.UserId });
+                userSelect.Items.Add(new { Text = user.Name + " " + user.LastName + " " + user.Login, Value = user.UserId });
             }
         }
         private void RentCarFc(object sender, RoutedEventArgs e)

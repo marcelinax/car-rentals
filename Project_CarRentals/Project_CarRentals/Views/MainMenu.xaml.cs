@@ -53,5 +53,11 @@ namespace Project_CarRentals.Views
             var listOfUserssPage = new UserList();
             NavigationService.Navigate(listOfUserssPage);
         }
+        private void GoReturnCar(object sender, RoutedEventArgs e)
+        {
+            var returnCarPage = new ReturnCar();
+            NavigationService.Navigate(returnCarPage);
+        }
+
     }
 }
