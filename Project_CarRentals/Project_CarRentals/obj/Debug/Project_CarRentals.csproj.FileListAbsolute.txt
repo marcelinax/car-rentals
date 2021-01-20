@@ -27,3 +27,6 @@ D:\Studia\Programowanie obiektowe - lab\Projekt semestralny\Car_rentals\Project_
 D:\Studia\Programowanie obiektowe - lab\Projekt semestralny\Car_rentals\Project_CarRentals\Project_CarRentals\obj\Debug\Views\CarCreate.baml
 D:\Studia\Programowanie obiektowe - lab\Projekt semestralny\Car_rentals\Project_CarRentals\Project_CarRentals\obj\Debug\Views\RentCar.g.cs
 D:\Studia\Programowanie obiektowe - lab\Projekt semestralny\Car_rentals\Project_CarRentals\Project_CarRentals\obj\Debug\Views\RentCar.baml
+D:\Studia\Programowanie obiektowe - lab\Projekt semestralny\Car_rentals\Project_CarRentals\Project_CarRentals\obj\Debug\Views\CarList.g.cs
+D:\Studia\Programowanie obiektowe - lab\Projekt semestralny\Car_rentals\Project_CarRentals\Project_CarRentals\obj\Debug\Views\CarList.baml
+D:\Studia\Programowanie obiektowe - lab\Projekt semestralny\Car_rentals\Project_CarRentals\Project_CarRentals\obj\Debug\GeneratedInternalTypeHelper.g.cs
