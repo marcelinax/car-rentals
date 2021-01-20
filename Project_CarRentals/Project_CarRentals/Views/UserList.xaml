@@ -1,14 +1,56 @@
-﻿<Page x:Class="Project_CarRentals.Views.UserList"
+﻿<Page
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Project_CarRentals.Views"
+      xmlns:Project_CarRentals="clr-namespace:Project_CarRentals" x:Class="Project_CarRentals.Views.UserList"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="UserList">
+      Title="UserList"  Width="800" Height="450">
 
-    <Grid>
-        
+    <Page.Resources>
+        <Project_CarRentals:CarRentalDataSet x:Key="carRentalDataSet"/>
+        <CollectionViewSource x:Key="usersViewSource" Source="{Binding Users, Source={StaticResource carRentalDataSet}}"/>
+        <Style x:Key="ButtonRoundedCorner" TargetType="Button">
+            <Setter Property="Background" Value="Silver"/>
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="10" Background="{TemplateBinding Background}" BorderThickness="2">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center">
+                            </ContentPresenter>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+
+    <Grid DataContext="{StaticResource usersViewSource}">
+        <Rectangle Fill="#FF252422" HorizontalAlignment="Left" Height="450" Stroke="#00000000" VerticalAlignment="Top" Width="800"/>
+        <TextBlock HorizontalAlignment="Left" Margin="327,22,0,0" TextWrapping="Wrap" Text="List of users" VerticalAlignment="Top" FontSize="30" Foreground="#FFFFFCF2" FontFamily="Rockwell"/>
+        <DataGrid x:Name="usersDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="0,75,0,83" RowDetailsVisibilityMode="VisibleWhenSelected" Background="#FF252422" Foreground="#FF403D39" BorderBrush="#00688CAF" Height="auto" HorizontalAlignment="Center" Width="800" MinColumnWidth="80">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="userIdColumn" Binding="{Binding UserId}" Header="User Id" IsReadOnly="True" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="loginColumn" Binding="{Binding Login}" Header="Login" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="passwordColumn" Binding="{Binding Password}" Header="Password" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="nameColumn" Binding="{Binding Name}" Header="Name" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="lastNameColumn" Binding="{Binding LastName}" Header="Last Name" Width="SizeToHeader"/>
+                <DataGridTemplateColumn x:Name="dateOfBirthColumn" Header="Date Of Birth" Width="SizeToHeader">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <DatePicker SelectedDate="{Binding DateOfBirth, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn x:Name="cityColumn" Binding="{Binding City}" Header="City" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="phoneColumn" Binding="{Binding Phone}" Header="Phone" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="emailColumn" Binding="{Binding Email}" Header="Email" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="pESELColumn" Binding="{Binding PESEL}" Header="PESEL" Width="SizeToHeader"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Style="{StaticResource ButtonRoundedCorner}" Content="Go back" HorizontalAlignment="Left" Margin="350,388,0,0" VerticalAlignment="Top" Width="100" Background="#FF403D39" FontSize="10" Height="27" Click="GoMainMenu"/>
     </Grid>
 </Page>

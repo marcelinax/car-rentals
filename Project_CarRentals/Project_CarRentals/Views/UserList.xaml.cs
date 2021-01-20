@@ -20,9 +20,23 @@ namespace Project_CarRentals.Views
     /// </summary>
     public partial class UserList : Page
     {
+        /// <summary>
+        /// Showing the list of added users in the database
+        /// </summary>
         public UserList()
         {
             InitializeComponent();
+            this.loadUsers();
+        }
+        private void loadUsers()
+        {
+            var context = new CarRentalEntities();
+            usersDataGrid.ItemsSource = context.Users.ToList();
+        }
+        private void GoMainMenu(object sender, RoutedEventArgs e)
+        {
+            var mainMenuPage = new MainMenu();
+            NavigationService.Navigate(mainMenuPage);
         }
     }
 }

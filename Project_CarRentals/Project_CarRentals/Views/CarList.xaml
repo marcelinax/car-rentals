@@ -29,9 +29,9 @@
     <Grid DataContext="{StaticResource carsViewSource}">
 
         <Rectangle Fill="#FF252422" HorizontalAlignment="Left" Height="450" Stroke="#00000000" VerticalAlignment="Top" Width="800"/>
-        <TextBlock HorizontalAlignment="Left" Margin="327,71,0,0" TextWrapping="Wrap" Text="List of cars" VerticalAlignment="Top" FontSize="30" Foreground="#FFFFFCF2" FontFamily="Rockwell"/>
+        <TextBlock HorizontalAlignment="Left" Margin="327,22,0,0" TextWrapping="Wrap" Text="List of cars" VerticalAlignment="Top" FontSize="30" Foreground="#FFFFFCF2" FontFamily="Rockwell"/>
 
-        <DataGrid x:Name="carsDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="0,158,0,10" RowDetailsVisibilityMode="VisibleWhenSelected"  Background="#FF403D39" Foreground="#FF403D39" BorderBrush="#00EB5E28" HorizontalAlignment="Center" VerticalAlignment="Top">
+        <DataGrid x:Name="carsDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="0,75,0,0" RowDetailsVisibilityMode="VisibleWhenSelected"  Background="#FF252422" Foreground="#FF403D39" BorderBrush="#00EB5E28" HorizontalAlignment="Center" VerticalAlignment="Top" Width="800" Height="auto" MinColumnWidth="61">
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="carIdColumn" Binding="{Binding CarId}" Header="Car Id" IsReadOnly="True" Width="SizeToHeader"  />
                 <DataGridTextColumn x:Name="brandColumn" Binding="{Binding Brand}" Header="Brand" Width="SizeToHeader"/>
