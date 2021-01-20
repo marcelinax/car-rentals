@@ -77,12 +77,7 @@ namespace Project_CarRentals.Views
 
             context.SaveChanges();
         }
-        private void fillCallculationTypeCombobox()
-        {
-            callculationTypeSelect.Items.Add("Price per hour");
-            callculationTypeSelect.Items.Add("Price per kilometer");
-            callculationTypeSelect.Items.Add("Price per day");
-        }
+       
 
         private void GoMainMenu(object sender, RoutedEventArgs e)
         {

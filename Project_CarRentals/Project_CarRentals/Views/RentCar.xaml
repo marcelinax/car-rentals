@@ -45,18 +45,10 @@
             </ComboBox.Background>
         </ComboBox>
         <TextBlock HorizontalAlignment="Left" Margin="248,163,0,0" TextWrapping="Wrap" Text="Choose car" VerticalAlignment="Top" Foreground="#FFFFFCF2" FontSize="10"/>
-        <ComboBox x:Name="callculationTypeSelect" HorizontalAlignment="Left" VerticalAlignment="Top" Width="140" Margin="413,237,0,0" BorderBrush="#FF252422" Foreground="#FF252422" >
-            <ComboBox.Background>
-                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
-                    <GradientStop Color="#FF252422" Offset="1"/>
-                </LinearGradientBrush>
-            </ComboBox.Background>
-        </ComboBox>
+        
         <TextBlock HorizontalAlignment="Left" Height="50" Margin="280,65,0,0" TextWrapping="Wrap" Text="Rent car" VerticalAlignment="Top" Width="245" Foreground="#FFFFFCF2" FontFamily="Rockwell" FontSize="30" TextAlignment="Center"/>
         <TextBlock HorizontalAlignment="Left" Margin="413,163,0,0" TextWrapping="Wrap" Text="Choose user" VerticalAlignment="Top" Foreground="#FFFFFCF2" FontSize="10"/>
         <TextBlock HorizontalAlignment="Left" Margin="248,218,0,0" TextWrapping="Wrap" Text="Rent to (not required)" VerticalAlignment="Top" Foreground="#FFFFFCF2" FontSize="10"/>
-        <TextBlock HorizontalAlignment="Left" Margin="415,218,0,0" TextWrapping="Wrap" Text="Choose callculation type " VerticalAlignment="Top" Foreground="#FFFFFCF2" FontSize="10"/>
 
     </Grid>
 </Page>

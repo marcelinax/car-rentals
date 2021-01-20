@@ -38,5 +38,10 @@ namespace Project_CarRentals.Views
             var mainMenuPage = new MainMenu();
             NavigationService.Navigate(mainMenuPage);
         }
+        private void GoListOfCars(object sender, RoutedEventArgs e)
+        {
+            var listOfCarsPage = new CarList();
+            NavigationService.Navigate(listOfCarsPage);
+        }
     }
 }

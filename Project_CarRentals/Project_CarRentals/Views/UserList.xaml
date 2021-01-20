@@ -31,7 +31,7 @@
     <Grid DataContext="{StaticResource usersViewSource}">
         <Rectangle Fill="#FF252422" HorizontalAlignment="Left" Height="450" Stroke="#00000000" VerticalAlignment="Top" Width="800"/>
         <TextBlock HorizontalAlignment="Left" Margin="327,22,0,0" TextWrapping="Wrap" Text="List of users" VerticalAlignment="Top" FontSize="30" Foreground="#FFFFFCF2" FontFamily="Rockwell"/>
-        <DataGrid x:Name="usersDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="0,75,0,83" RowDetailsVisibilityMode="VisibleWhenSelected" Background="#FF252422" Foreground="#FF403D39" BorderBrush="#00688CAF" Height="auto" HorizontalAlignment="Center" Width="800" MinColumnWidth="80">
+        <DataGrid x:Name="usersDataGrid" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Auto" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="0,75,0,83" RowDetailsVisibilityMode="VisibleWhenSelected" Background="#FF252422" Foreground="#FF403D39" BorderBrush="#00688CAF" Height="292" HorizontalAlignment="Center" Width="800" MinColumnWidth="80">
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="userIdColumn" Binding="{Binding UserId}" Header="User Id" IsReadOnly="True" Width="SizeToHeader"/>
                 <DataGridTextColumn x:Name="loginColumn" Binding="{Binding Login}" Header="Login" Width="SizeToHeader"/>
@@ -51,6 +51,7 @@
                 <DataGridTextColumn x:Name="pESELColumn" Binding="{Binding PESEL}" Header="PESEL" Width="SizeToHeader"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Style="{StaticResource ButtonRoundedCorner}" Content="Go back" HorizontalAlignment="Left" Margin="350,388,0,0" VerticalAlignment="Top" Width="100" Background="#FF403D39" FontSize="10" Height="27" Click="GoMainMenu"/>
+        <Button Style="{StaticResource ButtonRoundedCorner}" Content="Go back" HorizontalAlignment="Left" Margin="291,388,0,0" VerticalAlignment="Top" Width="100"  FontSize="10" Background="#FFEB5E28" Height="27" Click="GoMainMenu"/>
+        <Button Style="{StaticResource ButtonRoundedCorner}" Content="Go list of cars" HorizontalAlignment="Left" Margin="411,388,0,0" VerticalAlignment="Top" Width="100" Background="#FF403D39" FontSize="10" Height="27" Click="GoListOfCars"/>
     </Grid>
 </Page>

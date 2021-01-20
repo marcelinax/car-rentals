@@ -64,14 +64,6 @@ namespace Project_CarRentals.Views {
         #line default
         #line hidden
         
-        
-        #line 48 "..\..\..\Views\RentCar.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.ComboBox callculationTypeSelect;
-        
-        #line default
-        #line hidden
-        
         private bool _contentLoaded;
         
         /// <summary>
@@ -126,9 +118,6 @@ namespace Project_CarRentals.Views {
             return;
             case 5:
             this.userSelect = ((System.Windows.Controls.ComboBox)(target));
-            return;
-            case 6:
-            this.callculationTypeSelect = ((System.Windows.Controls.ComboBox)(target));
             return;
             }
             this._contentLoaded = true;

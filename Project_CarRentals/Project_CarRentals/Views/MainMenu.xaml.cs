@@ -50,7 +50,7 @@ namespace Project_CarRentals.Views
         }
         private void GoListofUsers(object sender, RoutedEventArgs e)
         {
-            var listOfUserssPage = new CarList();
+            var listOfUserssPage = new UserList();
             NavigationService.Navigate(listOfUserssPage);
         }
     }

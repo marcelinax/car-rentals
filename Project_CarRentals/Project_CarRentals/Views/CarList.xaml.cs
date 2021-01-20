@@ -38,5 +38,10 @@ namespace Project_CarRentals.Views
             var mainMenuPage = new MainMenu();
             NavigationService.Navigate(mainMenuPage);
         }
+        private void GoListOfUsers(object sender, RoutedEventArgs e)
+        {
+            var listOfUsersPage = new UserList();
+            NavigationService.Navigate(listOfUsersPage);
+        }
     }
 }

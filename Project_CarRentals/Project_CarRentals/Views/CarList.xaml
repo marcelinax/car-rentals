@@ -31,7 +31,7 @@
         <Rectangle Fill="#FF252422" HorizontalAlignment="Left" Height="450" Stroke="#00000000" VerticalAlignment="Top" Width="800"/>
         <TextBlock HorizontalAlignment="Left" Margin="327,22,0,0" TextWrapping="Wrap" Text="List of cars" VerticalAlignment="Top" FontSize="30" Foreground="#FFFFFCF2" FontFamily="Rockwell"/>
 
-        <DataGrid x:Name="carsDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="0,75,0,0" RowDetailsVisibilityMode="VisibleWhenSelected"  Background="#FF252422" Foreground="#FF403D39" BorderBrush="#00EB5E28" HorizontalAlignment="Center" VerticalAlignment="Top" Width="800" Height="auto" MinColumnWidth="61">
+        <DataGrid x:Name="carsDataGrid" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Auto" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="0,75,0,0" RowDetailsVisibilityMode="VisibleWhenSelected"  Background="#FF252422" Foreground="#FF403D39" BorderBrush="#00EB5E28" HorizontalAlignment="Center" VerticalAlignment="Top" Width="800" Height="292" MinColumnWidth="61">
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="carIdColumn" Binding="{Binding CarId}" Header="Car Id" IsReadOnly="True" Width="SizeToHeader"  />
                 <DataGridTextColumn x:Name="brandColumn" Binding="{Binding Brand}" Header="Brand" Width="SizeToHeader"/>
@@ -47,6 +47,7 @@
                 <DataGridTextColumn x:Name="userIdColumn" Binding="{Binding UserId}" Header="User Id" Width="SizeToHeader"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Style="{StaticResource ButtonRoundedCorner}" Content="Go back" HorizontalAlignment="Left" Margin="350,388,0,0" VerticalAlignment="Top" Width="100" Background="#FF403D39" FontSize="10" Height="27" Click="GoMainMenu"/>
+        <Button Style="{StaticResource ButtonRoundedCorner}" Content="Go back" HorizontalAlignment="Left" Margin="291,388,0,0" VerticalAlignment="Top" Width="100"  FontSize="10" Background="#FFEB5E28" Height="27" Click="GoMainMenu"/>
+        <Button Style="{StaticResource ButtonRoundedCorner}" Content="Go list of users" HorizontalAlignment="Left" Margin="411,388,0,0" VerticalAlignment="Top" Width="100" Background="#FF403D39" FontSize="10" Height="27" Click="GoListOfUsers"/>
     </Grid>
 </Page>
