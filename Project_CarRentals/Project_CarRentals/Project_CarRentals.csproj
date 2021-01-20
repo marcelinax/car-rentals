@@ -119,6 +119,9 @@
     <Compile Include="Views\ReturnCar.xaml.cs">
       <DependentUpon>ReturnCar.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\SharingCar.xaml.cs">
+      <DependentUpon>SharingCar.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\UserCreate.xaml.cs">
       <DependentUpon>UserCreate.xaml</DependentUpon>
     </Compile>
@@ -154,6 +157,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ReturnCar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SharingCar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

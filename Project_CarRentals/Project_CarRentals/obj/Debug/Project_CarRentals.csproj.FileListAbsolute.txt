@@ -34,3 +34,5 @@ D:\Studia\Programowanie obiektowe - lab\Projekt semestralny\Car_rentals\Project_
 D:\Studia\Programowanie obiektowe - lab\Projekt semestralny\Car_rentals\Project_CarRentals\Project_CarRentals\obj\Debug\Views\UserList.baml
 D:\Studia\Programowanie obiektowe - lab\Projekt semestralny\Car_rentals\Project_CarRentals\Project_CarRentals\obj\Debug\Views\ReturnCar.g.cs
 D:\Studia\Programowanie obiektowe - lab\Projekt semestralny\Car_rentals\Project_CarRentals\Project_CarRentals\obj\Debug\Views\ReturnCar.baml
+D:\Studia\Programowanie obiektowe - lab\Projekt semestralny\Car_rentals\Project_CarRentals\Project_CarRentals\obj\Debug\Views\SharingCar.g.cs
+D:\Studia\Programowanie obiektowe - lab\Projekt semestralny\Car_rentals\Project_CarRentals\Project_CarRentals\obj\Debug\Views\SharingCar.baml
