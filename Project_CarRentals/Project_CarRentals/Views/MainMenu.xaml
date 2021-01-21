@@ -27,15 +27,14 @@
 
     <Grid>
         <Rectangle Fill="#FF252422" HorizontalAlignment="Left" Height="450" Stroke="#00000000" VerticalAlignment="Top" Width="800"/>
-        <Button  Style="{StaticResource ButtonRoundedCorner}" Content="Create user" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="100" Background="#FFEB5E28" Foreground="#FFE8E4DB" Height="27" BorderThickness="1" FontSize="10" Margin="288,165,0,0" Click="GoUserCreate"/>
-        <Button  Style="{StaticResource ButtonRoundedCorner}" Content="Create car" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="100" Background="#403D39" Foreground="#FFE8E4DB" Height="27" BorderThickness="1" FontSize="10" Margin="413,165,0,0" Click="GoCarCreate"/>
-        <Button  Style="{StaticResource ButtonRoundedCorner}" Content="List of users" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="100" Background="#403D39" Foreground="#FFE8E4DB" Height="27" BorderThickness="1" FontSize="10" Margin="288,212,0,0" Click="GoListofUsers" />
-        <Button  Style="{StaticResource ButtonRoundedCorner}" Content="List of cars" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="100" Background="#FFEB5E28" Foreground="#FFE8E4DB" Height="27" BorderThickness="1" FontSize="10" Margin="413,212,0,0" Click="GoListofCars" />
-        <Button  Style="{StaticResource ButtonRoundedCorner}" Content="Rent car" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="100" Background="#FFEB5E28" Foreground="#FFE8E4DB" Height="27" BorderThickness="1" FontSize="10" Margin="288,259,0,0" Click="GoRentCar"/>
-        <Button  Style="{StaticResource ButtonRoundedCorner}" Content="Return car" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="100" Background="#403D39" Foreground="#FFE8E4DB" Height="27" BorderThickness="1" FontSize="10" Margin="413,259,0,0" Click="GoReturnCar" />
-        <Button  Style="{StaticResource ButtonRoundedCorner}" Content="Sharing your car" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="100" Background="#403D39" Foreground="#FFE8E4DB" Height="27" BorderThickness="1" FontSize="10" Margin="288,306,0,0" Click="GoSharingCar" />
-        <Image Margin="288,88,0,0" Source="/Project_CarRentals;component/logo.png" Height="30" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Stretch="Fill"/>
-        <TextBlock HorizontalAlignment="Center" Margin="392,89,287,0" TextWrapping="Wrap" Text="AUTOWAY" VerticalAlignment="Top" Foreground="#FFFFFCF2" FontFamily="Bauhaus 93" FontSize="20" TextAlignment="Center" FontWeight="Bold" Width="121"/>
+        <Button  Style="{StaticResource ButtonRoundedCorner}" Content="Create user" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="100" Background="#FFEB5E28" Foreground="#FFE8E4DB" Height="27" BorderThickness="1" FontSize="10" Margin="288,206,0,0" Click="GoUserCreate"/>
+        <Button  Style="{StaticResource ButtonRoundedCorner}" Content="Create car" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="100" Background="#403D39" Foreground="#FFE8E4DB" Height="27" BorderThickness="1" FontSize="10" Margin="413,206,0,0" Click="GoCarCreate"/>
+        <Button  Style="{StaticResource ButtonRoundedCorner}" Content="List of users" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="100" Background="#403D39" Foreground="#FFE8E4DB" Height="27" BorderThickness="1" FontSize="10" Margin="288,253,0,0" Click="GoListofUsers" />
+        <Button  Style="{StaticResource ButtonRoundedCorner}" Content="List of cars" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="100" Background="#FFEB5E28" Foreground="#FFE8E4DB" Height="27" BorderThickness="1" FontSize="10" Margin="413,253,0,0" Click="GoListofCars" />
+        <Button  Style="{StaticResource ButtonRoundedCorner}" Content="Rent car" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="100" Background="#FFEB5E28" Foreground="#FFE8E4DB" Height="27" BorderThickness="1" FontSize="10" Margin="288,300,0,0" Click="GoRentCar"/>
+        <Button  Style="{StaticResource ButtonRoundedCorner}" Content="Return car" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="100" Background="#403D39" Foreground="#FFE8E4DB" Height="27" BorderThickness="1" FontSize="10" Margin="413,300,0,0" Click="GoReturnCar" />
+        <Image Margin="288,129,0,0" Source="/Project_CarRentals;component/logo.png" Height="30" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Stretch="Fill"/>
+        <TextBlock HorizontalAlignment="Center" Margin="392,130,287,0" TextWrapping="Wrap" Text="AUTOWAY" VerticalAlignment="Top" Foreground="#FFFFFCF2" FontFamily="Bauhaus 93" FontSize="20" TextAlignment="Center" FontWeight="Bold" Width="121"/>
     </Grid>
 
 </Page>
