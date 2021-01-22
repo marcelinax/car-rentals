@@ -58,10 +58,10 @@ namespace Project_CarRentals.Views
             var returnCarPage = new ReturnCar();
             NavigationService.Navigate(returnCarPage);
         }
-        private void GoSharingCar(object sender, RoutedEventArgs e)
+        private void GoListOfPayments(object sender, RoutedEventArgs e)
         {
-            var returnSharingCarPage = new SharingCar();
-            NavigationService.Navigate(returnSharingCarPage);
+            var listOfPaymentsPage = new ListOfPayments();
+            NavigationService.Navigate(listOfPaymentsPage);
         }
 
     }

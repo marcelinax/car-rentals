@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Studia\Programowanie obiektowe - lab\Projekt semestralny\Car_rentals\Project_CarRentals\Project_CarRentals\App.xaml
-9-1659321312
+101875519205
 21750853300
-22158426512
+23-1214553749
 18-100448156
-MainWindow.xaml;Views\CarCreate.xaml;Views\CarList.xaml;Views\MainMenu.xaml;Views\RentCar.xaml;Views\ReturnCar.xaml;Views\SharingCar.xaml;Views\UserCreate.xaml;Views\UserList.xaml;
+MainWindow.xaml;Views\CarCreate.xaml;Views\CarList.xaml;Views\ListOfPayments.xaml;Views\MainMenu.xaml;Views\RentCar.xaml;Views\ReturnCar.xaml;Views\SharingCar.xaml;Views\UserCreate.xaml;Views\UserList.xaml;
 
 False
 
