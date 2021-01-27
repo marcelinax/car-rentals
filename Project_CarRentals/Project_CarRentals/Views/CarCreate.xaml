@@ -47,5 +47,7 @@
         <TextBox x:Name="pircePerDayInput" HorizontalAlignment="Left" Height="22" Margin="416,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Background="#FF403D39" Text="Price per day" Foreground="#FFFFFCF2" FontSize="10"  BorderBrush="#FF707070" VerticalContentAlignment="Center"/>
         <ComboBox  x:Name="userIDSelect" HorizontalAlignment="Left" Margin="582,208,0,0" VerticalAlignment="Top" Width="140" Height="22" BorderBrush="#FF403D39" Background="#FF4D473F" Foreground="#FF403D39" FontSize="10">
         </ComboBox>
+        <TextBlock x:Name="errorMessage" HorizontalAlignment="Left" Margin="127,334,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FFEA0F0F" />
+        <TextBlock x:Name="successMessage" HorizontalAlignment="Left" Margin="127,334,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Green" />
     </Grid>
 </Page> 
