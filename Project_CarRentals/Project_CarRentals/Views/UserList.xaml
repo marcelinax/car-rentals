@@ -31,7 +31,7 @@
     <Grid DataContext="{StaticResource usersViewSource}">
         <Rectangle Fill="#FF252422" HorizontalAlignment="Left" Height="450" Stroke="#00000000" VerticalAlignment="Top" Width="800"/>
         <TextBlock HorizontalAlignment="Left" Margin="327,22,0,0" TextWrapping="Wrap" Text="List of users" VerticalAlignment="Top" FontSize="30" Foreground="#FFFFFCF2" FontFamily="Rockwell"/>
-        <DataGrid x:Name="usersDataGrid" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Auto" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="0,75,0,83" RowDetailsVisibilityMode="VisibleWhenSelected" Background="#FF252422" Foreground="#FF403D39" BorderBrush="#00688CAF" Height="292" HorizontalAlignment="Center" Width="800" MinColumnWidth="80">
+        <DataGrid x:Name="usersDataGrid" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Auto" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="0,75,0,83" RowDetailsVisibilityMode="VisibleWhenSelected" Background="#FF252422" Foreground="#FF403D39" BorderBrush="#00688CAF" Height="292" HorizontalAlignment="Center" Width="800" MinColumnWidth="79">
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="userIdColumn" Binding="{Binding UserId}" Header="User Id" IsReadOnly="True" Width="SizeToHeader"/>
                 <DataGridTextColumn x:Name="loginColumn" Binding="{Binding Login}" Header="Login" Width="SizeToHeader"/>

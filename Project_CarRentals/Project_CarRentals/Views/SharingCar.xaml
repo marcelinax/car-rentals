@@ -22,12 +22,15 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        
     </Page.Resources>
+    
     <Grid>
         <Rectangle Fill="#FF252422" HorizontalAlignment="Left" Height="450" Stroke="#00000000" VerticalAlignment="Top" Width="800"/>
         <TextBlock HorizontalAlignment="Left" Height="50" Margin="280,65,0,0" TextWrapping="Wrap" Text="Sharing your car" VerticalAlignment="Top" Width="245" Foreground="#FFFFFCF2" FontFamily="Rockwell" FontSize="30" TextAlignment="Center"/>
         <TextBlock HorizontalAlignment="Left" Margin="248,163,0,0" TextWrapping="Wrap" Text="Choose car" VerticalAlignment="Top" Foreground="#FFFFFCF2" FontSize="10"/>
-        <ComboBox x:Name="returnSelect" HorizontalAlignment="Left" Margin="248,182,0,0" VerticalAlignment="Top" Width="140" Foreground="#FF252422" Background="#FF252422" BorderBrush="#FF252422"/>
+        <ComboBox x:Name="returnSelect"  HorizontalAlignment="Left" Margin="248,182,0,0" VerticalAlignment="Top" Width="140" Foreground="#FF252422" Background="#FF9C9C23" BorderBrush="#FF252422" Height="20">
+        </ComboBox>
         <TextBlock HorizontalAlignment="Left" Margin="248,218,0,0" TextWrapping="Wrap" Text="Sharing to (not required) " VerticalAlignment="Top" Foreground="#FFFFFCF2" FontSize="10"/>
         <TextBlock HorizontalAlignment="Left" Margin="415,163,0,0" TextWrapping="Wrap" Text="Sharing from " VerticalAlignment="Top" Foreground="#FFFFFCF2" FontSize="10"/>
         <DatePicker x:Name="sharingFromInput" HorizontalAlignment="Left" Margin="413,182,0,0" VerticalAlignment="Top" Width="140" Height="22" RenderTransformOrigin="0.771,0.909"/>

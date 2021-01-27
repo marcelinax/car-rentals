@@ -59,5 +59,8 @@
         </DatePicker>
         <Button  Style="{StaticResource ButtonRoundedCorner}" Content="Add" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="100" Background="#FFEB5E28" Foreground="#FFE8E4DB" Height="27" BorderThickness="1" FontSize="10" Margin="350,320,0,0" Click="Button_Click"/>
         <Button Style="{StaticResource ButtonRoundedCorner}" Content="Go back" HorizontalAlignment="Left" Margin="350,353,0,0" VerticalAlignment="Top" Width="100" Background="#FF403D39" FontSize="10" Height="27" Click="GoMainMenu"/>
+        <TextBlock x:Name="errorMessage" HorizontalAlignment="Left"  Margin="65,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" Foreground="#FFDC1414"/>
+        <TextBlock x:Name="successMessage" HorizontalAlignment="Left"  Margin="65,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" Foreground="Green"/>
+
     </Grid>
 </Page> 

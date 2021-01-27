@@ -22,30 +22,15 @@
                 </Setter.Value>
             </Setter>
         </Style>
-    </Page.Resources>
+        </Page.Resources>
     <Grid>
         <Rectangle Fill="#FF252422" HorizontalAlignment="Left" Height="450" Stroke="#00000000" VerticalAlignment="Top" Width="800"/>
-        <ComboBox x:Name="carSelect" HorizontalAlignment="Left" VerticalAlignment="Top" Width="140" Margin="248,182,0,0" BorderBrush="#FF252422" Foreground="#FF252422">
-            <ComboBox.Background>
-                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
-                    <GradientStop Color="#FF252422" Offset="1"/>
-                </LinearGradientBrush>
-            </ComboBox.Background>
-        </ComboBox>
+        <ComboBox x:Name="carSelect"   HorizontalAlignment="Left" VerticalAlignment="Top" Width="140" Margin="248,182,0,0" BorderBrush="#FF252422" Foreground="#FF252422"  Background="#FF403D39" Height="22"/>
         <DatePicker x:Name="rentToInput" HorizontalAlignment="Left" Margin="248,237,0,0" VerticalAlignment="Top" Width="140" Height="22" RenderTransformOrigin="0.771,0.909"/>
         <Button  Style="{StaticResource ButtonRoundedCorner}" Content="Rent" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="100" Background="#FFEB5E28" Foreground="#FFE8E4DB" Height="27" BorderThickness="1" FontSize="10" Margin="291,312,0,0" Click="RentCarFc"/>
         <Button Style="{StaticResource ButtonRoundedCorner}" Content="Go back" HorizontalAlignment="Left" Margin="411,312,0,0" VerticalAlignment="Top" Width="100" Background="#FF403D39" FontSize="10" Height="27" Click="GoMainMenu"/>
-        <ComboBox x:Name="userSelect" HorizontalAlignment="Left" VerticalAlignment="Top" Width="140" Margin="413,182,0,0" BorderBrush="#FF252422" Foreground="#FF252422" RenderTransformOrigin="1.407,0.409">
-            <ComboBox.Background>
-                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
-                    <GradientStop Color="#FF252422" Offset="1"/>
-                </LinearGradientBrush>
-            </ComboBox.Background>
-        </ComboBox>
+            <ComboBox x:Name="userSelect" HorizontalAlignment="Left" VerticalAlignment="Top" Width="140" Margin="413,182,0,0" BorderBrush="#FF252422" Foreground="#FF252422" RenderTransformOrigin="1.407,0.409" Height="22"/>
         <TextBlock HorizontalAlignment="Left" Margin="248,163,0,0" TextWrapping="Wrap" Text="Choose car" VerticalAlignment="Top" Foreground="#FFFFFCF2" FontSize="10"/>
-        
         <TextBlock HorizontalAlignment="Left" Height="50" Margin="280,65,0,0" TextWrapping="Wrap" Text="Rent car" VerticalAlignment="Top" Width="245" Foreground="#FFFFFCF2" FontFamily="Rockwell" FontSize="30" TextAlignment="Center"/>
         <TextBlock HorizontalAlignment="Left" Margin="413,163,0,0" TextWrapping="Wrap" Text="Choose user" VerticalAlignment="Top" Foreground="#FFFFFCF2" FontSize="10"/>
         <TextBlock HorizontalAlignment="Left" Margin="248,218,0,0" TextWrapping="Wrap" Text="Rent to (not required)" VerticalAlignment="Top" Foreground="#FFFFFCF2" FontSize="10"/>

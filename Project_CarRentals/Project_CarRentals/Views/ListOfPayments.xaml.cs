@@ -20,9 +20,27 @@ namespace Project_CarRentals.Views
     /// </summary>
     public partial class ListOfPayments : Page
     {
+        /// <summary>
+        /// Showing the list of payments in the database
+        /// </summary>
         public ListOfPayments()
         {
             InitializeComponent();
+        }
+        private void GoListOfCars(object sender, RoutedEventArgs e)
+        {
+            var listOfCarsPage = new CarList();
+            NavigationService.Navigate(listOfCarsPage);
+        }
+        private void GoListOfUsers(object sender, RoutedEventArgs e)
+        {
+            var listOfUsersPage = new UserList();
+            NavigationService.Navigate(listOfUsersPage);
+        }
+        private void GoMainMenu(object sender, RoutedEventArgs e)
+        {
+            var mainMenuPage = new MainMenu();
+            NavigationService.Navigate(mainMenuPage);
         }
     }
 }

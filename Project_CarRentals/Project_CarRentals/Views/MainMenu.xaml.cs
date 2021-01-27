@@ -43,15 +43,15 @@ namespace Project_CarRentals.Views
             var rentCarPage = new RentCar();
             NavigationService.Navigate(rentCarPage);
         }
-        private void GoListofCars(object sender, RoutedEventArgs e)
+        private void GoListOfCars(object sender, RoutedEventArgs e)
         {
             var listOfCarsPage = new CarList();
             NavigationService.Navigate(listOfCarsPage);
         }
-        private void GoListofUsers(object sender, RoutedEventArgs e)
+        private void GoListOfUsers(object sender, RoutedEventArgs e)
         {
-            var listOfUserssPage = new UserList();
-            NavigationService.Navigate(listOfUserssPage);
+            var listOfUsersPage = new UserList();
+            NavigationService.Navigate(listOfUsersPage);
         }
         private void GoReturnCar(object sender, RoutedEventArgs e)
         {
