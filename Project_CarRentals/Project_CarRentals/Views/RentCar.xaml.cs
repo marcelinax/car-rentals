@@ -28,6 +28,7 @@ namespace Project_CarRentals.Views
             InitializeComponent();
             this.fillCarCombobox();
             this.fillUserCombobox();
+            this.fillCallculationTypeCombobox();
         }
         
         private void fillCarCombobox()
@@ -46,6 +47,7 @@ namespace Project_CarRentals.Views
         private void fillUserCombobox()
         {
             var context = new CarRentalEntities();
+        
 
             userSelect.DisplayMemberPath = "Text";
             userSelect.SelectedValuePath = "Value";
@@ -59,14 +61,48 @@ namespace Project_CarRentals.Views
         private void RentCarFc(object sender, RoutedEventArgs e)
         {
             var context = new CarRentalEntities();
+            successMessage.Text = "";
+
+            string userId = userSelect.SelectedValue.ToString();
+            if (userId == "")
+            {
+                errorMessage.Text = "Choose user!";
+                return;
+            }
+            var carId = carSelect.SelectedValue.ToString();
+            if (carId == "")
+            {
+                errorMessage.Text = "Choose car!";
+                return;
+            }
+
             var selectedCarId = int.Parse(carSelect.SelectedValue.ToString());
 
+            if(rentToInput.SelectedDate == null)
+            {
+                errorMessage.Text = "Enter date!";
+                return;
+            }
+           
+            DateTime dateTo = (DateTime)rentToInput.SelectedDate;
+            if (dateTo < DateTime.Now)
+            {
+                errorMessage.Text = "Date must refer to the present or the future!";
+                return;
+            }
+
+            if(callculationTypeSelect.SelectedValue == null)
+            {
+                errorMessage.Text = "Choose callculation type!";
+                return;
+            }
             var newRental = new Rentals()
             {
                 CarId = selectedCarId,
                 UserId = int.Parse(userSelect.SelectedValue.ToString()),
                 DataFrom = DateTime.Now,
-                DataTo = (DateTime)rentToInput.SelectedDate
+                DataTo = (DateTime)rentToInput.SelectedDate,
+                CalculationType = callculationTypeSelect.SelectedValue.ToString()
             };
 
             context.Rentals.Add(newRental);
@@ -75,6 +111,9 @@ namespace Project_CarRentals.Views
             selectedCar.Availability = "No";
 
             context.SaveChanges();
+
+            errorMessage.Text = "";
+            successMessage.Text = "Car was rented.";
         }
        
 
@@ -82,6 +121,12 @@ namespace Project_CarRentals.Views
         {
             var mainMenuPage = new MainMenu();
             NavigationService.Navigate(mainMenuPage);
+        }
+        private void fillCallculationTypeCombobox()
+        {
+            callculationTypeSelect.Items.Add("Price per hour");
+            callculationTypeSelect.Items.Add("Price per kilometer");
+            callculationTypeSelect.Items.Add("Price per day");
         }
 
     }

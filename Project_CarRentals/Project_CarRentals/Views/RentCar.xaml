@@ -33,7 +33,10 @@
         <TextBlock HorizontalAlignment="Left" Margin="248,163,0,0" TextWrapping="Wrap" Text="Choose car" VerticalAlignment="Top" Foreground="#FFFFFCF2" FontSize="10"/>
         <TextBlock HorizontalAlignment="Left" Height="50" Margin="280,65,0,0" TextWrapping="Wrap" Text="Rent car" VerticalAlignment="Top" Width="245" Foreground="#FFFFFCF2" FontFamily="Rockwell" FontSize="30" TextAlignment="Center"/>
         <TextBlock HorizontalAlignment="Left" Margin="413,163,0,0" TextWrapping="Wrap" Text="Choose user" VerticalAlignment="Top" Foreground="#FFFFFCF2" FontSize="10"/>
-        <TextBlock HorizontalAlignment="Left" Margin="248,218,0,0" TextWrapping="Wrap" Text="Rent to (not required)" VerticalAlignment="Top" Foreground="#FFFFFCF2" FontSize="10"/>
-
+        <ComboBox x:Name="callculationTypeSelect"  HorizontalAlignment="Left" Margin="413,237,0,0" VerticalAlignment="Top" Width="140" Foreground="#FF252422" Background="#FF252422" BorderBrush="#FF252422"/>
+        <TextBlock HorizontalAlignment="Left" Margin="248,218,0,0" TextWrapping="Wrap" Text="Rent to " VerticalAlignment="Top" Foreground="#FFFFFCF2" FontSize="10"/>
+        <TextBlock x:Name="errorMessage" HorizontalAlignment="Left" Margin="127,334,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FFEA0F0F" />
+        <TextBlock x:Name="successMessage" HorizontalAlignment="Left" Margin="127,334,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Green" />
+        <TextBlock HorizontalAlignment="Left" Margin="415,218,0,0" TextWrapping="Wrap" Text="Choose callculation type " VerticalAlignment="Top" Foreground="#FFFFFCF2" FontSize="10"/>
     </Grid>
 </Page>

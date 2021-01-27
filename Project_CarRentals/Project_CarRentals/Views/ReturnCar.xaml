@@ -29,23 +29,9 @@
         <Button  Style="{StaticResource ButtonRoundedCorner}" Content="Return car" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="100" Background="#FFEB5E28" Foreground="#FFE8E4DB" Height="27" BorderThickness="1" FontSize="10" Margin="291,312,0,0" Click="ReturnCarFc"/>
         <TextBlock HorizontalAlignment="Left" Margin="248,163,0,0" TextWrapping="Wrap" Text="Choose rental" VerticalAlignment="Top" Foreground="#FFFFFCF2" FontSize="10"/>
         <Button Style="{StaticResource ButtonRoundedCorner}" Content="Go back" HorizontalAlignment="Left" Margin="411,312,0,0" VerticalAlignment="Top" Width="100" Background="#FF403D39" FontSize="10" Height="27" Click="GoMainMenu"/>
-        <ComboBox x:Name="returnSelect"  Style="{DynamicResource ComboBoxStyle1}"  HorizontalAlignment="Left" Margin="248,182,0,0" VerticalAlignment="Top" Width="140" Foreground="#FF252422" Background="#FF403D39" BorderBrush="#FF252422">
-            <ComboBox.Resources>
-                <SolidColorBrush x:Key="{x:Static SystemColors.WindowBrushKey}" Color="Red" />
-                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightTextBrushKey}" Color="Blue" />
-                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="Pink" />
-               
-                <Style TargetType="TextBlock">
-                    <Style.Triggers>
-                        <DataTrigger Binding="{Binding IsSelected, RelativeSource={RelativeSource AncestorType=ComboBoxItem}}" Value="True">
-                            <Setter Property="Background" Value="Red" />
-                        </DataTrigger>
-                    </Style.Triggers>
-                </Style>
-            </ComboBox.Resources>
+        <ComboBox x:Name="returnSelect"    HorizontalAlignment="Left" Margin="248,182,0,0" VerticalAlignment="Top" Width="140" Foreground="#FF252422" Background="#FF403D39" BorderBrush="#FF252422">
         </ComboBox>
-        <TextBlock HorizontalAlignment="Left" Margin="415,163,0,0" TextWrapping="Wrap" Text="Choose callculation type " VerticalAlignment="Top" Foreground="#FFFFFCF2" FontSize="10"/>
-        <ComboBox x:Name="callculationTypeSelect"  HorizontalAlignment="Left" Margin="413,182,0,0" VerticalAlignment="Top" Width="140" Foreground="#FF252422" Background="#FF252422" BorderBrush="#FF252422"/>
+       
         <TextBox x:Name ="amountToPayInput" HorizontalAlignment="Left" Height="22" Margin="248,237,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Background="#FF403D39" Foreground="#FFFFFCF2" FontSize="10"  BorderBrush="#FF707070" VerticalContentAlignment="Center"/>
         <TextBlock HorizontalAlignment="Left" Margin="248,218,0,0" TextWrapping="Wrap" Text="Amount to pay" VerticalAlignment="Top" Foreground="#FFFFFCF2" FontSize="10"/>
 
