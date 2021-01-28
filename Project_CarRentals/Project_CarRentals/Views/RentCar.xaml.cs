@@ -63,19 +63,22 @@ namespace Project_CarRentals.Views
             var context = new CarRentalEntities();
             successMessage.Text = "";
 
-            string userId = userSelect.SelectedValue.ToString();
-            if (userId == "")
+            if (userSelect.SelectedValue == null)
             {
                 errorMessage.Text = "Choose user!";
                 return;
             }
-            var carId = carSelect.SelectedValue.ToString();
-            if (carId == "")
+            
+            if (carSelect.SelectedValue == null)
             {
                 errorMessage.Text = "Choose car!";
                 return;
             }
-
+            if (callculationTypeSelect.SelectedValue == null)
+            {
+                errorMessage.Text = "Choose callculation type!";
+                return;
+            }
             var selectedCarId = int.Parse(carSelect.SelectedValue.ToString());
 
             if(rentToInput.SelectedDate == null)

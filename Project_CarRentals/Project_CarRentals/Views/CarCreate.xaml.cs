@@ -149,8 +149,8 @@ namespace Project_CarRentals.Views
                 return;
             }
 
-            string userId = (userIDSelect.SelectedValue.ToString());
-            if(userId == "")
+             ;
+            if(userIDSelect.SelectedValue == null)
             {
                 errorMessage.Text = "Choose user!";
                 return;
