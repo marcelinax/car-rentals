@@ -67,6 +67,11 @@ namespace Project_CarRentals.Views
         {
             var listOfRentalsPage = new ListOfRentals();
             NavigationService.Navigate(listOfRentalsPage);
+        } 
+        
+        private void ExitApp(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
         }
 
     }

@@ -36,7 +36,17 @@
         <Button  Style="{StaticResource ButtonRoundedCorner}" Content="Rent car" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="100" Background="#FFEB5E28" Foreground="#FFE8E4DB" Height="27" BorderThickness="1" FontSize="10" Margin="288,259,0,0" Click="GoRentCar"/>
         <Image Margin="288,84,0,0" Source="/Project_CarRentals;component/logo.png" Height="30" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Stretch="Fill"/>
         <Button  Style="{StaticResource ButtonRoundedCorner}" Content="List of rentals" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="100" Background="#FFEB5E28" Foreground="#FFE8E4DB" Height="27" BorderThickness="1" FontSize="10" Margin="413,300,0,0" Click="GoListOfRentals"/>
-<TextBlock HorizontalAlignment="Center" Margin="392,84,287,0" TextWrapping="Wrap" Text="AUTOWAY" VerticalAlignment="Top" Foreground="#FFFFFCF2" FontFamily="Bauhaus 93" FontSize="20" TextAlignment="Center" FontWeight="Bold" Width="121"/>
+        <TextBlock HorizontalAlignment="Center" Margin="392,84,287,0" TextWrapping="Wrap" Text="AUTOWAY" VerticalAlignment="Top" Foreground="#FFFFFCF2" FontFamily="Bauhaus 93" FontSize="20" TextAlignment="Center" FontWeight="Bold" Width="121"/>
+        <Button  Style="{StaticResource ButtonRoundedCorner}" Content="EXIT" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="225" Background="#FFEB5E28" Foreground="#FFE8E4DB" Height="27" BorderThickness="1" FontSize="10" Margin="288,341,0,0" Click="ExitApp" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.071"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
     </Grid>
 
 </Page>
