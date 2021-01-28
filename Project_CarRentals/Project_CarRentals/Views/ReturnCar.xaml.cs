@@ -27,12 +27,15 @@ namespace Project_CarRentals.Views
         {
             InitializeComponent();
             this.fillReturnSelect();
-           
+
         }
         private void fillReturnSelect()
         {
 
             var context = new CarRentalEntities();
+          
+
+
 
             returnSelect.DisplayMemberPath = "Text";
             returnSelect.SelectedValuePath = "Value";
@@ -43,28 +46,144 @@ namespace Project_CarRentals.Views
             {
                 returnSelect.Items.Add(new { Text = rental.e.Brand + " " + rental.e.Model + " [" + rental.e.CarYear + "] " + rental.ep.e.Name + " " + rental.ep.e.LastName, Value = rental.ep.ep.RentalId });
             }
+
+            
         }
 
         private void ReturnCarFc(object sender, RoutedEventArgs e)
         {
             var context = new CarRentalEntities();
+            successMessage.Text = "";
+            paymentMessage.Text = "";
+
+            var rentals = context.Rentals;
+
+            if (returnSelect.SelectedValue == null)
+            {
+                errorMessage.Text = "Choose car to return!";
+                return;
+            }
 
             var selectedRentalId = int.Parse(returnSelect.SelectedValue.ToString());
-
             var rental = context.Rentals.First(r => r.RentalId == selectedRentalId);
+            var distanceTraveled = 0;
+            if (rental.CalculationType == "Price per kilometer")
+            {
+                try
+                {
+                    distanceTraveled = int.Parse(distanceTraveledInput.Text);
 
+                    if (distanceTraveled <= 0)
+                    {
+                        errorMessage.Text = "Distance traveled must be higher than zero!";
+                        return;
+                    }
+                }
+                catch
+                {
+                    errorMessage.Text = "Invalid distance traveled!";
+                    return;
+                }
+
+                if (distanceTraveled <= 0)
+                {
+                    errorMessage.Text = "You need to enter distance traveled";
+                    return;
+                }
+
+                
+            }
             rental.DataTo = DateTime.Now;
 
             var rentedCar = context.Cars.First(c => c.CarId == rental.CarId);
             rentedCar.Availability = "Yes";
 
+            var payment = new Payments() {
+                RentalId = rental.RentalId,
+                TotalAmount = decimal.Parse(amountToPayInput.Text),
+                UserId = rental.UserId,
+            };
+            context.Payments.Add(payment);
+
             context.SaveChanges();
+
+            errorMessage.Text = "";
+            successMessage.Text = "Car was returned.";
         }
+
+        private void CalculateAmountToPay()
+        {
+            var context = new CarRentalEntities();
+            decimal amount = 0;
+
+            if (returnSelect.SelectedValue != null) { 
+                var selectedRentalId = int.Parse(returnSelect.SelectedValue.ToString());
+                var rental = context.Rentals.First(r => r.RentalId == selectedRentalId);
+                var car = context.Cars.First(c => c.CarId == rental.CarId);
+
+                var rentTime = rental.DataFrom;
+                var returnTime = DateTime.Now;
+
+                switch (rental.CalculationType)
+                {
+                    case "Price per kilometer":
+                        try
+                        {
+                            amount = Math.Round(int.Parse(distanceTraveledInput.Text) * car.PricePerKm, 2);
+                        }
+                        catch { }
+                        break;
+                    case "Price per hour":
+                        amount = Math.Round((decimal)((returnTime - rentTime).TotalSeconds / 60 / 60) * car.PricePerHour, 2);
+                        break;
+                    case "Price per day":
+                        amount = Math.Round((decimal)((returnTime - rentTime).TotalSeconds / 60 / 60 / 24) * car.PricePerDay, 2);
+                        break;
+                }
+            }
+
+            amountToPayInput.Text = amount.ToString();
+        }
+
+        private void DrawPaymentMethodMessage()
+        {
+            var context = new CarRentalEntities();
+            if (returnSelect.SelectedValue != null)
+            {
+                var selectedRentalId = int.Parse(returnSelect.SelectedValue.ToString());
+                var rental = context.Rentals.First(r => r.RentalId == selectedRentalId);
+                var car = context.Cars.First(c => c.CarId == rental.CarId);
+
+                switch (rental.CalculationType)
+                {
+                    case "Price per kilometer":
+                        paymentMessage.Text = $"Tariff per kilometer ({car.PricePerKm}/km PLN).";
+                        break;
+                    case "Price per hour":
+                        paymentMessage.Text = $"Tariff per hour ({car.PricePerHour}/hour PLN).";
+                        break;
+                    case "Price per day":
+                        paymentMessage.Text = $"Tariff per day ({car.PricePerDay}/day PLN).";
+                        break;
+                }
+            }
+        }
+
         private void GoMainMenu(object sender, RoutedEventArgs e)
         {
             var mainMenuPage = new MainMenu();
             NavigationService.Navigate(mainMenuPage);
         }
-        
+
+        private void returnSelect_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            DrawPaymentMethodMessage();
+            CalculateAmountToPay();
+        }
+
+        private void distanceTraveledInput_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            CalculateAmountToPay();
+        }
     }
 }

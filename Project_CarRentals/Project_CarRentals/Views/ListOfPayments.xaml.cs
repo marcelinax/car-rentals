@@ -26,6 +26,12 @@ namespace Project_CarRentals.Views
         public ListOfPayments()
         {
             InitializeComponent();
+            loadPayments();
+        }
+        private void loadPayments()
+        {
+            var context = new CarRentalEntities();
+            paymentsDataGrid.ItemsSource = context.Payments.ToList();
         }
         private void GoListOfCars(object sender, RoutedEventArgs e)
         {
@@ -46,6 +52,11 @@ namespace Project_CarRentals.Views
         {
             var mainMenuPage = new MainMenu();
             NavigationService.Navigate(mainMenuPage);
+        }
+
+        private void paymentsDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
