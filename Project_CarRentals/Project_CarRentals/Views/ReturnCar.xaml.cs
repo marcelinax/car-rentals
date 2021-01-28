@@ -32,10 +32,9 @@ namespace Project_CarRentals.Views
         private void fillReturnSelect()
         {
 
+            returnSelect.Items.Clear();
+
             var context = new CarRentalEntities();
-          
-
-
 
             returnSelect.DisplayMemberPath = "Text";
             returnSelect.SelectedValuePath = "Value";
@@ -97,6 +96,7 @@ namespace Project_CarRentals.Views
 
             var rentedCar = context.Cars.First(c => c.CarId == rental.CarId);
             rentedCar.Availability = "Yes";
+            rentedCar.Mileage += distanceTraveled;
 
             var payment = new Payments() {
                 RentalId = rental.RentalId,
@@ -107,8 +107,18 @@ namespace Project_CarRentals.Views
 
             context.SaveChanges();
 
+            ResetForm();
+
             errorMessage.Text = "";
-            successMessage.Text = "Car was returned.";
+            successMessage.Text = "Car was returned."; 
+        }
+
+        private void ResetForm()
+        {
+            returnSelect.SelectedValue = null;
+            fillReturnSelect();
+            distanceTraveledInput.Text = "";
+            CalculateAmountToPay();
         }
 
         private void CalculateAmountToPay()

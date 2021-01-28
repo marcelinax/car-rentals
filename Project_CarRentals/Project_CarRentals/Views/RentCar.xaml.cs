@@ -33,6 +33,7 @@ namespace Project_CarRentals.Views
         
         private void fillCarCombobox()
         {
+            carSelect.Items.Clear();
             var context = new CarRentalEntities();
 
             carSelect.DisplayMemberPath = "Text";
@@ -44,8 +45,19 @@ namespace Project_CarRentals.Views
                 carSelect.Items.Add(new { Text = car.Brand + " " + car.Model + " [" + car.CarYear + "] " + car.FuelType + " " + car.Mileage + "km", Value = car.CarId });
             }
         }
+        private void ResetForm()
+        {
+            carSelect.SelectedValue = null;
+            fillCarCombobox();
+            userSelect.SelectedValue = null;
+            fillUserCombobox();
+            callculationTypeSelect.SelectedValue = null;
+            rentToInput.SelectedDate = null;
+
+        }
         private void fillUserCombobox()
         {
+            userSelect.Items.Clear();
             var context = new CarRentalEntities();
         
 
@@ -117,6 +129,7 @@ namespace Project_CarRentals.Views
 
             errorMessage.Text = "";
             successMessage.Text = "Car was rented.";
+            ResetForm();
         }
        
 

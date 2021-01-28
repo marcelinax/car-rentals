@@ -133,6 +133,10 @@ namespace Project_CarRentals.Views
             {
                 errorMessage.Text = "Enter valid PESEL!";
                 return;
+            }if (pesel.Length > 11)
+            {
+                errorMessage.Text = "Enter valid PESEL!";
+                return;
             }
             if (users.Where(u => u.PESEL == pesel).ToList().Count == 1)
             {
@@ -146,7 +150,11 @@ namespace Project_CarRentals.Views
                 errorMessage.Text = "Enter phone!";
                 return;
             }
-            if (phone.Length <9)
+            if (phone.Length < 9)
+            {
+                errorMessage.Text = "Enter valid phone!";
+                return;
+            }if (phone.Length > 9)
             {
                 errorMessage.Text = "Enter valid phone!";
                 return;
@@ -177,8 +185,22 @@ namespace Project_CarRentals.Views
 
             errorMessage.Text = "";
             successMessage.Text = "User was created.";
+            ResetForm();
         }
-        
+        private void ResetForm()
+        {
+            birthdateInput.SelectedDate = null;
+            cityInput.Text = "";
+            emailInput.Text = "";
+            surnameInput.Text = "";
+            loginInput.Text = "";
+            nameInput.Text = "";
+            passwordInput.Text = "";
+            peselInput.Text = "";
+            phoneInput.Text = "";
+
+        }
+
         private void GoMainMenu(object sender, RoutedEventArgs e)
         {
             var mainMenuPage = new MainMenu();

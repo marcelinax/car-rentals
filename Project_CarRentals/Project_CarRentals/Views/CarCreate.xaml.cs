@@ -174,13 +174,31 @@ namespace Project_CarRentals.Views
 
             errorMessage.Text = "";
             successMessage.Text = "Car was created.";
+            ResetForm();
         }
+      
+        private void ResetForm()
+        {
+            userIDSelect.SelectedValue = null;
+            fillCombobox();
+            modelInput.Text = "";
+            brandInput.Text = "";
+            typeInput.Text = "";
+            carYearInput.Text = "";
+            fuelTypeInput.Text = "";
+            mileageInput.Text = "";
+            availabilityInput.Text = "";
+            pircePerKmInput.Text = "";
+            pircePerHourInput.Text = "";
+            pircePerDayInput.Text = "";
+        }
+
         /// <summary>
         /// User selection from the list of users from DataBase
         /// </summary>
-
         public void fillCombobox()
         {
+            userIDSelect.Items.Clear();
             var context = new CarRentalEntities();
 
             userIDSelect.DisplayMemberPath = "Text";
