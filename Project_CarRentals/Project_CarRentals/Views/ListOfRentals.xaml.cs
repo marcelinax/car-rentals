@@ -23,7 +23,15 @@ namespace Project_CarRentals.Views
         public ListOfRentals()
         {
             InitializeComponent();
+            loadfRentals();
         }
+
+        private void loadfRentals()
+        {
+            var context = new CarRentalEntities();
+            rentalsDataGrid.ItemsSource = context.Rentals.ToList();
+        }
+
         private void GoListOfCars(object sender, RoutedEventArgs e)
         {
             var listOfCarsPage = new CarList();

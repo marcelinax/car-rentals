@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="42fce9bf-c1e0-4105-8cb1-504301c7788b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.vs/Project_CarRentals/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Project_CarRentals/v16/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_CarRentals/Views/MainMenu.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Project_CarRentals/Views/MainMenu.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_CarRentals/obj/Debug/MainWindow.baml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_CarRentals/obj/Debug/Project_CarRentals.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Project_CarRentals/obj/Debug/Project_CarRentals.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_CarRentals/obj/Debug/Project_CarRentals_MarkupCompile.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Project_CarRentals/obj/Debug/Project_CarRentals_MarkupCompile.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_CarRentals/obj/Debug/Views/CarCreate.baml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_CarRentals/obj/Debug/Views/CarList.baml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_CarRentals/obj/Debug/Views/ListOfPayments.baml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_CarRentals/obj/Debug/Views/ListOfRentals.baml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_CarRentals/obj/Debug/Views/MainMenu.baml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_CarRentals/obj/Debug/Views/MainMenu.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Project_CarRentals/obj/Debug/Views/MainMenu.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_CarRentals/obj/Debug/Views/MainMenu.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Project_CarRentals/obj/Debug/Views/MainMenu.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_CarRentals/obj/Debug/Views/RentCar.baml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_CarRentals/obj/Debug/Views/ReturnCar.baml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_CarRentals/obj/Debug/Views/SharingCar.baml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_CarRentals/obj/Debug/Views/UserCreate.baml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_CarRentals/obj/Debug/Views/UserList.baml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1niPawH1uy8ggZF4mwNu8QVhO0e" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <created>1611870006540</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1611870006540</updated>
+      <workItem from="1611870009868" duration="1000" />
+    </task>
+    <servers />
+  </component>
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>
