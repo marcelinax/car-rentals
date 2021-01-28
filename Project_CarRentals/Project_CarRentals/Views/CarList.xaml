@@ -47,7 +47,9 @@
                 <DataGridTextColumn x:Name="userIdColumn" Binding="{Binding UserId}" Header="User Id" Width="SizeToHeader"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Style="{StaticResource ButtonRoundedCorner}" Content="Go back" HorizontalAlignment="Left" Margin="291,388,0,0" VerticalAlignment="Top" Width="100"  FontSize="10" Background="#FFEB5E28" Height="27" Click="GoMainMenu"/>
-        <Button Style="{StaticResource ButtonRoundedCorner}" Content="Go list of users" HorizontalAlignment="Left" Margin="411,388,0,0" VerticalAlignment="Top" Width="100" Background="#FF403D39" FontSize="10" Height="27" Click="GoListOfUsers"/>
+        <Button Style="{StaticResource ButtonRoundedCorner}" Content="Go back" HorizontalAlignment="Left" Margin="194,388,0,0" VerticalAlignment="Top" Width="100"  FontSize="10" Background="#FFEB5E28" Height="27" Click="GoMainMenu"/>
+        <Button Style="{StaticResource ButtonRoundedCorner}" Content="Go list of users" HorizontalAlignment="Left" Margin="414,388,0,0" VerticalAlignment="Top" Width="100" Background="#FFEB5E28" FontSize="10" Height="27" Click="GoListOfUsers"/>
+        <Button Style="{StaticResource ButtonRoundedCorner}" Content="Go list of rentals" HorizontalAlignment="Left" Margin="524,388,0,0" VerticalAlignment="Top" Width="100" Background="#FF403D39" FontSize="10" Height="27" Click="GoListOfRentals"/>
+        <Button Style="{StaticResource ButtonRoundedCorner}" Content="Go list of payments" HorizontalAlignment="Left" Margin="304,388,0,0" VerticalAlignment="Top" Width="100" Background="#FF403D39" FontSize="10" Height="27" Click="GoListOfPayments"/>
     </Grid>
 </Page>

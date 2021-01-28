@@ -1,0 +1,62 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Project_CarRentals.Views"
+      xmlns:Project_CarRentals="clr-namespace:Project_CarRentals" x:Class="Project_CarRentals.Views.ListOfRentals"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ListOfRentals" Width="800" Height="450">
+
+    <Page.Resources>
+        <Project_CarRentals:CarRentalDataSet x:Key="carRentalDataSet"/>
+        <CollectionViewSource x:Key="rentalsViewSource" Source="{Binding Rentals, Source={StaticResource carRentalDataSet}}"/>
+        <Style x:Key="ButtonRoundedCorner" TargetType="Button">
+            <Setter Property="Background" Value="Silver"/>
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="10" Background="{TemplateBinding Background}" BorderThickness="2">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center">
+                            </ContentPresenter>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+
+    <Grid DataContext="{StaticResource rentalsViewSource}">
+        <Rectangle Fill="#FF252422" HorizontalAlignment="Left" Height="450" Stroke="#00000000" VerticalAlignment="Top" Width="800"/>
+        <TextBlock HorizontalAlignment="Left" Margin="311,22,0,0" TextWrapping="Wrap" Text="List of rentals" VerticalAlignment="Top" FontSize="30" Foreground="#FFFFFCF2" FontFamily="Rockwell"/>
+
+        <DataGrid x:Name="rentalsDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="0,75,0,0" RowDetailsVisibilityMode="VisibleWhenSelected" Background="#FF252422" Foreground="#FF403D39" BorderBrush="#00EB5E28" Width="800" Height="292" MinColumnWidth="132">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="rentalIdColumn" Binding="{Binding RentalId}" Header="Rental Id" IsReadOnly="True" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="userIdColumn" Binding="{Binding UserId}" Header="User Id" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="carIdColumn" Binding="{Binding CarId}" Header="Car Id" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="calculationTypeColumn" Binding="{Binding CalculationType}" Header="Calculation Type" Width="SizeToHeader"/>
+                <DataGridTemplateColumn x:Name="dataFromColumn" Header="Data From" Width="SizeToHeader">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <DatePicker SelectedDate="{Binding DataFrom, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn x:Name="dataToColumn" Header="Data To" Width="SizeToHeader">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <DatePicker SelectedDate="{Binding DataTo, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Style="{StaticResource ButtonRoundedCorner}" Content="Go back" HorizontalAlignment="Left" Margin="194,388,0,0" VerticalAlignment="Top" Width="100"  FontSize="10" Background="#FFEB5E28" Height="27" Click="GoMainMenu"/>
+        <Button Style="{StaticResource ButtonRoundedCorner}" Content="Go list of users" HorizontalAlignment="Left" Margin="414,388,0,0" VerticalAlignment="Top" Width="100" Background="#FFEB5E28" FontSize="10" Height="27" Click="GoListOfUsers"/>
+        <Button Style="{StaticResource ButtonRoundedCorner}" Content="Go list of payments" HorizontalAlignment="Left" Margin="524,388,0,0" VerticalAlignment="Top" Width="100" Background="#FF403D39" FontSize="10" Height="27" Click="GoListOfPayments"/>
+        <Button Style="{StaticResource ButtonRoundedCorner}" Content="Go list of cars" HorizontalAlignment="Left" Margin="304,388,0,0" VerticalAlignment="Top" Width="100" Background="#FF403D39" FontSize="10" Height="27" Click="GoListOfCars"/>
+    </Grid>
+</Page>

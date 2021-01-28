@@ -63,6 +63,11 @@ namespace Project_CarRentals.Views
             var listOfPaymentsPage = new ListOfPayments();
             NavigationService.Navigate(listOfPaymentsPage);
         }
+        private void GoListOfRentals(object sender, RoutedEventArgs e)
+        {
+            var listOfRentalsPage = new ListOfRentals();
+            NavigationService.Navigate(listOfRentalsPage);
+        }
 
     }
 }

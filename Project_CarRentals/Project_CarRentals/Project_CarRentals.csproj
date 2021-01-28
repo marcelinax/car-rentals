@@ -114,6 +114,9 @@
     <Compile Include="Views\ListOfPayments.xaml.cs">
       <DependentUpon>ListOfPayments.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ListOfRentals.xaml.cs">
+      <DependentUpon>ListOfRentals.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MainMenu.xaml.cs">
       <DependentUpon>MainMenu.xaml</DependentUpon>
     </Compile>
@@ -153,6 +156,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ListOfPayments.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ListOfRentals.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

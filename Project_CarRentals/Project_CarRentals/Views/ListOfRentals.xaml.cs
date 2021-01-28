@@ -16,42 +16,33 @@ using System.Windows.Shapes;
 namespace Project_CarRentals.Views
 {
     /// <summary>
-    /// Logika interakcji dla klasy CarList.xaml
+    /// Showing the list of rentals in the database
     /// </summary>
-    public partial class CarList : Page
+    public partial class ListOfRentals : Page
     {
-        /// <summary>
-        /// Showing the list of added cars in the database
-        /// </summary>
-        public CarList()
+        public ListOfRentals()
         {
             InitializeComponent();
-            this.loadCarsList();
         }
-        private void loadCarsList()
+        private void GoListOfCars(object sender, RoutedEventArgs e)
         {
-            var context = new CarRentalEntities();
-            carsDataGrid.ItemsSource = context.Cars.ToList();
-        }
-        private void GoMainMenu(object sender, RoutedEventArgs e)
-        {
-            var mainMenuPage = new MainMenu();
-            NavigationService.Navigate(mainMenuPage);
+            var listOfCarsPage = new CarList();
+            NavigationService.Navigate(listOfCarsPage);
         }
         private void GoListOfUsers(object sender, RoutedEventArgs e)
         {
             var listOfUsersPage = new UserList();
             NavigationService.Navigate(listOfUsersPage);
         }
+        private void GoMainMenu(object sender, RoutedEventArgs e)
+        {
+            var mainMenuPage = new MainMenu();
+            NavigationService.Navigate(mainMenuPage);
+        }
         private void GoListOfPayments(object sender, RoutedEventArgs e)
         {
             var listOfPaymentsPage = new ListOfPayments();
             NavigationService.Navigate(listOfPaymentsPage);
-        }
-        private void GoListOfRentals(object sender, RoutedEventArgs e)
-        {
-            var listOfRentalsPage = new ListOfRentals();
-            NavigationService.Navigate(listOfRentalsPage);
         }
     }
 }
