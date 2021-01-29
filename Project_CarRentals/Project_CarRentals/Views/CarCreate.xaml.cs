@@ -57,21 +57,29 @@ namespace Project_CarRentals.Views
                 errorMessage.Text = "Enter valid model!";
                 return;
             }
-            if (!carYearInput.Text.All(char.IsDigit)) {
-                errorMessage.Text = "Car year must be a number!";
-                return;
-            }
-            var carYear = int.Parse(carYearInput.Text);
-            if (carYear > DateTime.Now.Year)
+           
+
+            try
             {
-                errorMessage.Text = "Invalid date, car year cannot be higher than actual year!";
-                return;
+
+                var carYear = int.Parse(carYearInput.Text);
+                if (carYear < 1870)
+                {
+                    errorMessage.Text = "Invalid date, car year must be higher than car invention year!";
+                    return;
+                }
+                if (carYear > DateTime.Now.Year)
+                {
+                    errorMessage.Text = "Invalid date, car year cannot be higher than actual year!";
+                    return;
+                }
             }
-            if (carYear < 1870)
+            catch
             {
-                errorMessage.Text = "Invalid date, car year must be higher than car invention year!";
+                errorMessage.Text = "Invalid car year!";
                 return;
             }
+            
             string fuelType = fuelTypeInput.Text.ToLower();
             if (fuelType == "" || fuelType == "fuel type" )
             {
@@ -84,15 +92,19 @@ namespace Project_CarRentals.Views
                 return;
             }
 
-            if (!mileageInput.Text.All(char.IsDigit))
+            try
             {
-                errorMessage.Text = "Mileage must be a number!";
-                return;
+
+                var mileage = int.Parse(mileageInput.Text);
+                if (mileage < 0)
+                {
+                    errorMessage.Text = "Mileage cannot be negative!";
+                    return;
+                }
             }
-            var mileage = int.Parse(mileageInput.Text);
-            if (mileage < 0)
+            catch
             {
-                errorMessage.Text = "Mileage cannot be negative!";
+                errorMessage.Text = "Invalid mileage!";
                 return;
             }
 
@@ -181,16 +193,16 @@ namespace Project_CarRentals.Views
         {
             userIDSelect.SelectedValue = null;
             fillCombobox();
-            modelInput.Text = "";
-            brandInput.Text = "";
-            typeInput.Text = "";
-            carYearInput.Text = "";
-            fuelTypeInput.Text = "";
-            mileageInput.Text = "";
-            availabilityInput.Text = "";
-            pircePerKmInput.Text = "";
-            pircePerHourInput.Text = "";
-            pircePerDayInput.Text = "";
+            modelInput.Text = "Model";
+            brandInput.Text = "Brand";
+            typeInput.Text = "Type";
+            carYearInput.Text = "Car year";
+            fuelTypeInput.Text = "Fuel type";
+            mileageInput.Text = "Mileage";
+            availabilityInput.Text = "Availability";
+            pircePerKmInput.Text = "Price per km (PLN)";
+            pircePerHourInput.Text = "Price per hour (PLN)";
+            pircePerDayInput.Text = "Price per day (PLN)";
         }
 
         /// <summary>

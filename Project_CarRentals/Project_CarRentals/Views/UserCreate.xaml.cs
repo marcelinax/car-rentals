@@ -190,14 +190,14 @@ namespace Project_CarRentals.Views
         private void ResetForm()
         {
             birthdateInput.SelectedDate = null;
-            cityInput.Text = "";
-            emailInput.Text = "";
-            surnameInput.Text = "";
-            loginInput.Text = "";
-            nameInput.Text = "";
-            passwordInput.Text = "";
-            peselInput.Text = "";
-            phoneInput.Text = "";
+            cityInput.Text = "City";
+            emailInput.Text = "E-mail";
+            surnameInput.Text = "Surname";
+            loginInput.Text = "Login";
+            nameInput.Text = "Name";
+            passwordInput.Text = "Password";
+            peselInput.Text = "PESEL";
+            phoneInput.Text = "Phone";
 
         }
 

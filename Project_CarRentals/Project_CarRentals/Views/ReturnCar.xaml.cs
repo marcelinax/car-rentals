@@ -110,7 +110,7 @@ namespace Project_CarRentals.Views
             ResetForm();
 
             errorMessage.Text = "";
-            successMessage.Text = "Car was returned."; 
+            successMessage.Text = $"{rentedCar.Brand} {rentedCar.Model} was returned by {rental.Users.Login}.";
         }
 
         private void ResetForm()

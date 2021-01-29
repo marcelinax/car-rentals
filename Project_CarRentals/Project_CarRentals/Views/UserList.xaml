@@ -31,14 +31,13 @@
     <Grid DataContext="{StaticResource usersViewSource}">
         <Rectangle Fill="#FF252422" HorizontalAlignment="Left" Height="450" Stroke="#00000000" VerticalAlignment="Top" Width="800"/>
         <TextBlock HorizontalAlignment="Left" Margin="327,22,0,0" TextWrapping="Wrap" Text="List of users" VerticalAlignment="Top" FontSize="30" Foreground="#FFFFFCF2" FontFamily="Rockwell"/>
-        <DataGrid x:Name="usersDataGrid" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Auto" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="0,75,0,83" RowDetailsVisibilityMode="VisibleWhenSelected" Background="#FF252422" Foreground="#FF403D39" BorderBrush="#00688CAF" Height="292" HorizontalAlignment="Center" Width="800" MinColumnWidth="75">
+        <DataGrid x:Name="usersDataGrid" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Auto" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="0,75,0,83" RowDetailsVisibilityMode="VisibleWhenSelected" Background="#FF252422" Foreground="#FF403D39" BorderBrush="#00688CAF" Height="292" HorizontalAlignment="Center" Width="800" MinColumnWidth="83">
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="userIdColumn" Binding="{Binding UserId}" Header="User Id" IsReadOnly="True" Width="SizeToHeader"/>
                 <DataGridTextColumn x:Name="loginColumn" Binding="{Binding Login}" Header="Login" Width="SizeToHeader"/>
-                <DataGridTextColumn x:Name="passwordColumn" Binding="{Binding Password}" Header="Password" Width="SizeToHeader"/>
                 <DataGridTextColumn x:Name="nameColumn" Binding="{Binding Name}" Header="Name" Width="SizeToHeader"/>
                 <DataGridTextColumn x:Name="lastNameColumn" Binding="{Binding LastName}" Header="Last Name" Width="SizeToHeader"/>
-                <DataGridTemplateColumn x:Name="dateOfBirthColumn" Header="Date Of Birth" Width="110">
+                <DataGridTemplateColumn x:Name="dateOfBirthColumn" Header="Date Of Birth" Width="112">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <DatePicker SelectedDate="{Binding DateOfBirth, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
@@ -47,8 +46,8 @@
                 </DataGridTemplateColumn>
                 <DataGridTextColumn x:Name="cityColumn" Binding="{Binding City}" Header="City" Width="SizeToHeader"/>
                 <DataGridTextColumn x:Name="phoneColumn" Binding="{Binding Phone}" Header="Phone" Width="SizeToHeader"/>
-                <DataGridTextColumn x:Name="emailColumn" Binding="{Binding Email}" Header="Email" Width="SizeToHeader"/>
-                <DataGridTextColumn x:Name="pESELColumn" Binding="{Binding PESEL}" Header="PESEL" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="emailColumn" Binding="{Binding Email}" Header="Email" Width="95"/>
+                <DataGridTextColumn x:Name="pESELColumn" Binding="{Binding PESEL}" Header="PESEL" Width="95"/>
             </DataGrid.Columns>
         </DataGrid>
         <Button Style="{StaticResource ButtonRoundedCorner}" Content="Go back" HorizontalAlignment="Left" Margin="194,388,0,0" VerticalAlignment="Top" Width="100"  FontSize="10" Background="#FFEB5E28" Height="27" Click="GoMainMenu"/>
